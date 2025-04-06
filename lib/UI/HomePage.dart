@@ -11,6 +11,20 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold();
+    return  DefaultTabController(length: 2, child: Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter News App'),
+        bottom: TabBar(
+            tabs: [
+              Tab( text:"Breaking"),
+              Tab(text:"All news")
+        ]),
+      ),
+      body: TabBarView(children:
+          [
+
+
+          ]),
+    ));
   }
 }
